@@ -5,7 +5,7 @@ import SearchBox from './components/search-box/search-box.component';
 import './App.css';
 
 const App = () => {
-  const [searchFild, setSearchField] = useState(''); // [value, setValue]
+  const [searchField, setSearchField] = useState(''); // [value, setValue]
   const [monsters, setMonsters]= useState([]);
   const [filteredMonsters, setFilterMonsters] = useState(monsters);
 
@@ -19,15 +19,15 @@ const App = () => {
   
   useEffect(() => {
     const newFilteredMonsters = monsters.filter((monster) => {
-      return monster.name.toLocaleLowerCase().includes(searchFild);
+      return monster.name.toLocaleLowerCase().includes(searchField);
     });
 
     setFilterMonsters(newFilteredMonsters);
-  }, [monsters, searchFild]);
+  }, [monsters, searchField]);
 
   const onSearchChange = (event) => {
-    const searchFildString = event.target.value.toLocaleLowerCase();
-    setSearchField(searchFildString);
+    const searchFieldString = event.target.value.toLocaleLowerCase();
+    setSearchField(searchFieldString);
   };
   
   return(
@@ -51,7 +51,7 @@ const App = () => {
 
 //     this.state = {
 //       monsters: [],
-//       searchFild: '',      
+//       searchField: '',      
 //     };
     
 //   }  
@@ -71,20 +71,20 @@ const App = () => {
 //   }
 
 //   onSearchChange = (event) => {
-//     const searchFild =  event.target.value.toLocaleLowerCase();
+//     const searchField =  event.target.value.toLocaleLowerCase();
 //     this.setState (()=> {
-//       return { searchFild };
+//       return { searchField };
 //     });          
 //   };
 
 //   render() {
 //     console.log('render from AppJS')
 
-//     const { monsters, searchFild } = this.state;
+//     const { monsters, searchField } = this.state;
 //     const { onSearchChange } = this;
 
 //     const filteredMonsters = monsters.filter((monster) => {
-//       return monster.name.toLocaleLowerCase().includes(searchFild);
+//       return monster.name.toLocaleLowerCase().includes(searchField);
 //     });
 
 //     return (
