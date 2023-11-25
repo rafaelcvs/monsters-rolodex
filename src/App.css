@@ -8,8 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(
     to left,
-    rgba(7, 27, 82, 1) 0%,
-    rgba(0, 128, 128, 1) 100%
+    rgb(5 40 12) 0%,
+    rgb(48 242 73) 100%
   );
   text-align: center;
 }
@@ -17,8 +17,8 @@ body {
 .app-title {
   margin-top: 75px;
   margin-bottom: 50px;
-  font-size: 76px;
-  color: #0ccac4;
+  font-size: 100px;
+  color: #0e111e;
   font-family: 'Bigelow Rules';
 
 }
