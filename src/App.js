@@ -31,7 +31,7 @@ const App = () => {
   };
   
   return(
-    <div classname='app'>
+    <div className='app'>
       <h1 className='app-title'>Monsters Rolodex</h1>
       
       <SearchBox
